@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		645287A5153FB09E00B2E87C /* AFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 645287A3153FB09E00B2E87C /* AFDetailViewController.m */; };
+		645287A6153FB09E00B2E87C /* AFDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 645287A4153FB09E00B2E87C /* AFDetailView.xib */; };
+		645287B1153FB6B600B2E87C /* AFScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 645287B0153FB6B600B2E87C /* AFScrollViewController.m */; };
+		645287B3153FB72700B2E87C /* AFScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 645287B2153FB72700B2E87C /* AFScrollView.xib */; };
 		661A2BD8153E7DA7008565A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661A2BD7153E7DA7008565A6 /* UIKit.framework */; };
 		661A2BDA153E7DA7008565A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661A2BD9153E7DA7008565A6 /* Foundation.framework */; };
 		661A2BDC153E7DA7008565A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661A2BDB153E7DA7008565A6 /* CoreGraphics.framework */; };
@@ -26,6 +30,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		645287A2153FB09E00B2E87C /* AFDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDetailViewController.h; sourceTree = "<group>"; };
+		645287A3153FB09E00B2E87C /* AFDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDetailViewController.m; sourceTree = "<group>"; };
+		645287A4153FB09E00B2E87C /* AFDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFDetailView.xib; sourceTree = "<group>"; };
+		645287AF153FB6B600B2E87C /* AFScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFScrollViewController.h; path = ../AFScrollViewController.h; sourceTree = "<group>"; };
+		645287B0153FB6B600B2E87C /* AFScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFScrollViewController.m; path = ../AFScrollViewController.m; sourceTree = "<group>"; };
+		645287B2153FB72700B2E87C /* AFScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFScrollView.xib; sourceTree = "<group>"; };
 		661A2BD3153E7DA7008565A6 /* iPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		661A2BD7153E7DA7008565A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		661A2BD9153E7DA7008565A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -128,6 +138,10 @@
 				661A2C0C153EA371008565A6 /* AFLargeCell.m */,
 				661A2BEE153E81D7008565A6 /* AFTableViewController.h */,
 				661A2BEF153E81D7008565A6 /* AFTableViewController.m */,
+				645287A2153FB09E00B2E87C /* AFDetailViewController.h */,
+				645287A3153FB09E00B2E87C /* AFDetailViewController.m */,
+				645287AF153FB6B600B2E87C /* AFScrollViewController.h */,
+				645287B0153FB6B600B2E87C /* AFScrollViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -135,6 +149,8 @@
 		661A2BF4153E81E9008565A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				645287A4153FB09E00B2E87C /* AFDetailView.xib */,
+				645287B2153FB72700B2E87C /* AFScrollView.xib */,
 				661A2C11153EA933008565A6 /* AFSmallCell.xib */,
 				661A2C06153EA30E008565A6 /* AFLargeCell.xib */,
 				661A2BF0153E81D7008565A6 /* AFTableViewController.xib */,
@@ -219,6 +235,8 @@
 				661A2C05153E9777008565A6 /* testCell.png in Resources */,
 				661A2C07153EA30E008565A6 /* AFLargeCell.xib in Resources */,
 				661A2C12153EA933008565A6 /* AFSmallCell.xib in Resources */,
+				645287A6153FB09E00B2E87C /* AFDetailView.xib in Resources */,
+				645287B3153FB72700B2E87C /* AFScrollView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +254,8 @@
 				661A2C10153EA915008565A6 /* AFSmallCell.m in Sources */,
 				661A2C19153EC17C008565A6 /* AFCategory.m in Sources */,
 				661A2C1C153EC1CE008565A6 /* AFStory.m in Sources */,
+				645287A5153FB09E00B2E87C /* AFDetailViewController.m in Sources */,
+				645287B1153FB6B600B2E87C /* AFScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +359,7 @@
 				661A2BED153E7DA7008565A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

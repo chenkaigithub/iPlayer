@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFScrollViewController.h"
 
 @interface AFTableViewController : UITableViewController
 
