@@ -20,6 +20,8 @@
     [super viewDidLoad];
     AFDetailViewController *detailView = [[AFDetailViewController alloc] initWithNibName:@"AFDetailView" bundle:nil];
     
+    scrollView.backgroundColor = [UIColor clearColor];
+    scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pagesBG"]];
     [scrollView addSubview:detailView.view];
     [scrollView addSubview:detailView.view];
     [scrollView addSubview:detailView.view];

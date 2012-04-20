@@ -9,8 +9,12 @@
 #import "AFSmallCell.h"
 
 @implementation AFSmallCell
+@synthesize leftButton;
+@synthesize rightButton;
 @synthesize cellLeftImage, cellLeftLabel;
 @synthesize cellRightLabel, cellRightImage;
+@synthesize leftStory;
+@synthesize rightStory;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -27,4 +31,11 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)leftButtonPressed:(id)sender {
+    NSLog(@"%d", leftStory);
+}
+
+- (IBAction)rightButtonPressed:(id)sender {
+    NSLog(@"%d", rightStory);
+}
 @end

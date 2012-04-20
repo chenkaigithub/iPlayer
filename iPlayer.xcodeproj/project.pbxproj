@@ -11,6 +11,8 @@
 		645287A6153FB09E00B2E87C /* AFDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 645287A4153FB09E00B2E87C /* AFDetailView.xib */; };
 		645287B1153FB6B600B2E87C /* AFScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 645287B0153FB6B600B2E87C /* AFScrollViewController.m */; };
 		645287B3153FB72700B2E87C /* AFScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 645287B2153FB72700B2E87C /* AFScrollView.xib */; };
+		645287B5153FD67100B2E87C /* imageUnderlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 645287B4153FD67100B2E87C /* imageUnderlay.png */; };
+		645287B7153FDD2D00B2E87C /* pagesBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 645287B6153FDD2C00B2E87C /* pagesBG.png */; };
 		661A2BD8153E7DA7008565A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661A2BD7153E7DA7008565A6 /* UIKit.framework */; };
 		661A2BDA153E7DA7008565A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661A2BD9153E7DA7008565A6 /* Foundation.framework */; };
 		661A2BDC153E7DA7008565A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661A2BDB153E7DA7008565A6 /* CoreGraphics.framework */; };
@@ -36,6 +38,8 @@
 		645287AF153FB6B600B2E87C /* AFScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFScrollViewController.h; path = ../AFScrollViewController.h; sourceTree = "<group>"; };
 		645287B0153FB6B600B2E87C /* AFScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFScrollViewController.m; path = ../AFScrollViewController.m; sourceTree = "<group>"; };
 		645287B2153FB72700B2E87C /* AFScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFScrollView.xib; sourceTree = "<group>"; };
+		645287B4153FD67100B2E87C /* imageUnderlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageUnderlay.png; sourceTree = "<group>"; };
+		645287B6153FDD2C00B2E87C /* pagesBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagesBG.png; sourceTree = "<group>"; };
 		661A2BD3153E7DA7008565A6 /* iPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		661A2BD7153E7DA7008565A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		661A2BD9153E7DA7008565A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -173,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				661A2C04153E9777008565A6 /* testCell.png */,
+				645287B4153FD67100B2E87C /* imageUnderlay.png */,
+				645287B6153FDD2C00B2E87C /* pagesBG.png */,
 				661A2BF9153E8A58008565A6 /* background.png */,
 			);
 			name = Resources;
@@ -237,6 +243,8 @@
 				661A2C12153EA933008565A6 /* AFSmallCell.xib in Resources */,
 				645287A6153FB09E00B2E87C /* AFDetailView.xib in Resources */,
 				645287B3153FB72700B2E87C /* AFScrollView.xib in Resources */,
+				645287B5153FD67100B2E87C /* imageUnderlay.png in Resources */,
+				645287B7153FDD2D00B2E87C /* pagesBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,10 +329,12 @@
 		661A2BEC153E7DA7008565A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: QUT Mobile Dev (25BQ2GV5FN)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPlayer/iPlayer-Prefix.pch";
 				INFOPLIST_FILE = "iPlayer/iPlayer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C0DFDB43-8FB6-4BC3-8B83-E3D67D898DB7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AFDetailViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *image;
+@property (strong, nonatomic) IBOutlet UITextView *storyParagraph;
+@property (strong, nonatomic) IBOutlet UILabel *storyHeadline;
+@property (strong, nonatomic) IBOutlet UIImageView *imageUnderlay;
 
 @end

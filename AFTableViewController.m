@@ -77,6 +77,8 @@
                 smallImageData = [[NSData alloc] initWithContentsOfURL:[[[news stories] objectAtIndex:storyNumber] imageURL]];
                 smallCell.cellRightImage.image = [UIImage imageWithData:smallImageData];
                 smallCell.cellRightLabel.text = [[[news stories] objectAtIndex:storyNumber] title];
+                smallCell.leftStory = storyNumber-1;
+                smallCell.rightStory = storyNumber;
                 return smallCell;
             }
             break;
