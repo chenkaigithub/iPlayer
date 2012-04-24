@@ -26,8 +26,11 @@
 		661A2C12153EA933008565A6 /* AFSmallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661A2C11153EA933008565A6 /* AFSmallCell.xib */; };
 		661A2C19153EC17C008565A6 /* AFCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 661A2C18153EC17C008565A6 /* AFCategory.m */; };
 		661A2C1C153EC1CE008565A6 /* AFStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 661A2C1B153EC1CE008565A6 /* AFStory.m */; };
+		66B333231543FACD001D8E49 /* imageUnderlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B333221543FACD001D8E49 /* imageUnderlay.png */; };
+		66B3332615451695001D8E49 /* titleUnderline.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B3332515451695001D8E49 /* titleUnderline.png */; };
+		66B3332B15452A31001D8E49 /* navBarTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B3332A15452A31001D8E49 /* navBarTexture.png */; };
+		66B3333415462A17001D8E49 /* pagesBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B3333315462A17001D8E49 /* pagesBackground@2x.png */; };
 		66BC371915411FDA0016CC49 /* imageUnderlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66BC371815411FDA0016CC49 /* imageUnderlay@2x.png */; };
-		66BC37231541249F0016CC49 /* pagesBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66BC37221541249F0016CC49 /* pagesBackground@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +64,11 @@
 		661A2C18153EC17C008565A6 /* AFCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFCategory.m; sourceTree = "<group>"; };
 		661A2C1A153EC1CE008565A6 /* AFStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFStory.h; sourceTree = "<group>"; };
 		661A2C1B153EC1CE008565A6 /* AFStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFStory.m; sourceTree = "<group>"; };
+		66B333221543FACD001D8E49 /* imageUnderlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageUnderlay.png; sourceTree = "<group>"; };
+		66B3332515451695001D8E49 /* titleUnderline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleUnderline.png; sourceTree = "<group>"; };
+		66B3332A15452A31001D8E49 /* navBarTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBarTexture.png; sourceTree = "<group>"; };
+		66B3333315462A17001D8E49 /* pagesBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pagesBackground@2x.png"; sourceTree = "<group>"; };
 		66BC371815411FDA0016CC49 /* imageUnderlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageUnderlay@2x.png"; sourceTree = "<group>"; };
-		66BC37221541249F0016CC49 /* pagesBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pagesBackground@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,9 +180,12 @@
 			isa = PBXGroup;
 			children = (
 				661A2C04153E9777008565A6 /* testCell.png */,
-				66BC37221541249F0016CC49 /* pagesBackground@2x.png */,
 				66BC371815411FDA0016CC49 /* imageUnderlay@2x.png */,
 				661A2BF9153E8A58008565A6 /* background.png */,
+				66B3332A15452A31001D8E49 /* navBarTexture.png */,
+				66B3333315462A17001D8E49 /* pagesBackground@2x.png */,
+				66B3332515451695001D8E49 /* titleUnderline.png */,
+				66B333221543FACD001D8E49 /* imageUnderlay.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -240,7 +249,10 @@
 				645287A6153FB09E00B2E87C /* AFDetailView.xib in Resources */,
 				645287B3153FB72700B2E87C /* AFScrollView.xib in Resources */,
 				66BC371915411FDA0016CC49 /* imageUnderlay@2x.png in Resources */,
-				66BC37231541249F0016CC49 /* pagesBackground@2x.png in Resources */,
+				66B333231543FACD001D8E49 /* imageUnderlay.png in Resources */,
+				66B3332615451695001D8E49 /* titleUnderline.png in Resources */,
+				66B3332B15452A31001D8E49 /* navBarTexture.png in Resources */,
+				66B3333415462A17001D8E49 /* pagesBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

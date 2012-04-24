@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"iPlayer"];
-    self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
@@ -42,7 +42,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AFAppDelegate *appDelegate = (AFAppDelegate *)[[UIApplication sharedApplication] delegate];
     AFCategory *news = [appDelegate.categoryList objectForKey:@"smhNews"];
-
     
     static NSString *LargeCellIdentifier = @"largeCell";
     AFLargeCell *largeCell = [tableView dequeueReusableCellWithIdentifier:LargeCellIdentifier];
@@ -60,7 +59,8 @@
                 NSData *image = [[NSData alloc] initWithContentsOfURL:[[[news stories] objectAtIndex:indexPath.row] imageURL]];
                 largeCell.cellImage.image = [UIImage imageWithData:image];
                 largeCell.cellLabel.text = [[[news stories] objectAtIndex:indexPath.row] title];
-                            return largeCell;
+                largeCell.selectionStyle = UITableViewCellSelectionStyleNone;
+                return largeCell;
             }
             break;
             
@@ -79,6 +79,7 @@
                 smallCell.cellRightLabel.text = [[[news stories] objectAtIndex:storyNumber] title];
                 smallCell.leftStory = storyNumber-1;
                 smallCell.rightStory = storyNumber;
+                smallCell.selectionStyle = UITableViewCellSelectionStyleNone;
                 return smallCell;
             }
             break;
@@ -88,11 +89,10 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [self.navigationController.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"pagesBackground"]]];
     AFScrollViewController *scrollView = [[AFScrollViewController alloc] initWithNibName:@"AFScrollView" bundle:nil];
-    
+    scrollView.pageNumber = indexPath.row;
     [self.navigationController pushViewController:scrollView animated:YES];
-   
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -103,4 +103,6 @@
     }
 }
 
+- (IBAction)leftButtonpressed:(id)sender {
+}
 @end

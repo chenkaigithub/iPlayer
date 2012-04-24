@@ -7,6 +7,7 @@
 //
 
 #import "AFSmallCell.h"
+#import "AFScrollViewController.h"
 
 @implementation AFSmallCell
 @synthesize leftButton;
@@ -32,10 +33,17 @@
 }
 
 - (IBAction)leftButtonPressed:(id)sender {
-    NSLog(@"%d", leftStory);
+    AFScrollViewController *scrollView = [[AFScrollViewController alloc] initWithNibName:@"AFScrollView" bundle:nil];
+    scrollView.pageNumber = leftStory;
+    UINavigationController *nav = self.window.rootViewController;
+    [nav pushViewController:scrollView animated:YES];
+    
 }
 
 - (IBAction)rightButtonPressed:(id)sender {
-    NSLog(@"%d", rightStory);
+    AFScrollViewController *scrollView = [[AFScrollViewController alloc] initWithNibName:@"AFScrollView" bundle:nil];
+    scrollView.pageNumber = rightStory;
+    UINavigationController *nav = self.window.rootViewController;
+    [nav pushViewController:scrollView animated:YES];
 }
 @end

@@ -15,9 +15,6 @@
 
 
 @implementation AFDetailViewController
-@synthesize imageButton;
-@synthesize storyParagraph;
-@synthesize storyHeadline;
 @synthesize imageUnderlay;
 @synthesize pageNumber;
 @synthesize data;
@@ -35,21 +32,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    storyParagraph.text = [NSString stringWithFormat:@"%d", pageNumber];
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[[data objectAtIndex:pageNumber] imageURL]]];
-    [imageButton setBackgroundImage:image forState:normal];
     imageUnderlay.image = [UIImage imageNamed:@"imageUnderlay"];
-   
-    // Do any additional setup after loading the view from its nib.
+    
+    UIButton *imageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [imageButton setBackgroundImage:image forState:UIControlStateNormal];
+    [imageButton setFrame:CGRectMake(25, 20, 270, 162)];
+    [self.view addSubview:imageButton];
+    
+    UILabel *storyHeadline = [[UILabel alloc] initWithFrame:CGRectMake(40, 185, 240, 80)];
+    storyHeadline.text = [[data objectAtIndex:pageNumber] title];
+    storyHeadline.numberOfLines = 0;
+    storyHeadline.textAlignment = UITextAlignmentCenter;
+    [storyHeadline setBackgroundColor:[UIColor clearColor]];
+    [storyHeadline setFont:[UIFont boldSystemFontOfSize:20]];
+    
+    UIImageView *underline = [[UIImageView alloc] initWithFrame:CGRectMake(40, 180 + storyHeadline.frame.size.height, 240, 1)];
+    [underline setImage:[UIImage imageNamed:@"titleUnderline"]];
+    [self.view addSubview:underline];
+
+    
+    UILabel *storyParagraph = [[UILabel alloc]initWithFrame:CGRectMake(40, 205 + storyHeadline.frame.size.height, 250, 200)];
+    storyParagraph.text = [[data objectAtIndex:pageNumber] detail];
+    storyParagraph.numberOfLines = 0;
+    [storyParagraph sizeToFit];
+    [storyParagraph setBackgroundColor:[UIColor clearColor]];
+    
+    [self.view addSubview:storyParagraph];
+    [self.view addSubview:storyHeadline];
+
 }
 
-- (void)viewDidUnload
-{
-    [self setStoryParagraph:nil];
-    [self setStoryHeadline:nil];
+- (void)viewDidUnload {
+
     [self setImageUnderlay:nil];
     [self setImageUnderlay:nil];
-    [self setImageButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

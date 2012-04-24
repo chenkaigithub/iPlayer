@@ -15,7 +15,7 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) NSMutableArray *viewControllers;
-
+@property (nonatomic) NSInteger pageNumber;
 -(void)loadScrollViewWithPage:(int)page;
 
 

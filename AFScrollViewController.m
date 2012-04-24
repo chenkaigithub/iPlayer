@@ -17,6 +17,7 @@
 @synthesize pageControl;
 @synthesize viewControllers;
 @synthesize pageControlUsed;
+@synthesize pageNumber;
 
 static int NumberOfPages = 15;
 
@@ -32,23 +33,40 @@ static int NumberOfPages = 15;
     _scrollView.contentSize = CGSizeMake(_scrollView.frame.size.width * NumberOfPages, _scrollView.frame.size.height);
     pageControl.numberOfPages = NumberOfPages;
     pageControl.currentPage = 0;
+    //_scrollView.backgroundColor = [UIColor clearColor];
+    _scrollView.delegate = self;
+    
+    if (pageNumber == 0) {
+        [self loadScrollViewWithPage:pageNumber];
+        [self loadScrollViewWithPage:pageNumber+1];
+    }
+    
+    CGRect frame = _scrollView.frame;
+    frame.origin.x = frame.size.width * pageNumber;
+    frame.origin.y = 0;
         
-    _scrollView.backgroundColor = [UIColor clearColor];
-    [self loadScrollViewWithPage:0];
+    [_scrollView scrollRectToVisible:frame animated:NO];
 }
 
 
 -(void)loadScrollViewWithPage:(int)page {
     if (page < 0) return;
-    if (page > NumberOfPages) return;
+    if (page >= NumberOfPages) return;
     
     AFDetailViewController *pageView = [viewControllers objectAtIndex:page];
     if ((NSNull *)pageView == [NSNull null]) {
         pageView = [[AFDetailViewController alloc] initWithPageNumber:page];
         [viewControllers replaceObjectAtIndex:page withObject:pageView];
     }
-        
-    [_scrollView addSubview:pageView.view];
+    
+    if (pageView.view.superview == nil) {
+        CGRect frame = _scrollView.frame;
+        frame.origin.x = frame.size.width * page;
+        frame.origin.y = 0;
+        pageView.view.frame = frame;
+        [_scrollView addSubview:pageView.view];
+
+    }
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -84,9 +102,9 @@ static int NumberOfPages = 15;
     frame.origin.y = 0;
 
     [_scrollView scrollRectToVisible:frame animated:YES];
+    pageControlUsed = YES;
+
 }
-
-
 
 - (void)viewDidUnload {
     viewControllers = nil;
