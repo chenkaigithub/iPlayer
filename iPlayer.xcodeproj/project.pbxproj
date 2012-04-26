@@ -31,6 +31,12 @@
 		66B3332B15452A31001D8E49 /* navBarTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B3332A15452A31001D8E49 /* navBarTexture.png */; };
 		66B3333415462A17001D8E49 /* pagesBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B3333315462A17001D8E49 /* pagesBackground@2x.png */; };
 		66BC371915411FDA0016CC49 /* imageUnderlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66BC371815411FDA0016CC49 /* imageUnderlay@2x.png */; };
+		66DAD8FE15467800003FA325 /* AFSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DAD8FC15467800003FA325 /* AFSharingViewController.m */; };
+		66DAD8FF15467800003FA325 /* AFSharingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD8FD15467800003FA325 /* AFSharingView.xib */; };
+		66DAD9251548DF1D003FA325 /* shareTwitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD9241548DF1D003FA325 /* shareTwitter.png */; };
+		66DAD9281548DFFE003FA325 /* shareFacebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD9261548DFFE003FA325 /* shareFacebook.png */; };
+		66DAD9291548DFFE003FA325 /* shareMail.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD9271548DFFE003FA325 /* shareMail.png */; };
+		66DAD92B1548E102003FA325 /* shareOnline.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD92A1548E102003FA325 /* shareOnline.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +75,13 @@
 		66B3332A15452A31001D8E49 /* navBarTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBarTexture.png; sourceTree = "<group>"; };
 		66B3333315462A17001D8E49 /* pagesBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pagesBackground@2x.png"; sourceTree = "<group>"; };
 		66BC371815411FDA0016CC49 /* imageUnderlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageUnderlay@2x.png"; sourceTree = "<group>"; };
+		66DAD8FB15467800003FA325 /* AFSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSharingViewController.h; sourceTree = "<group>"; };
+		66DAD8FC15467800003FA325 /* AFSharingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSharingViewController.m; sourceTree = "<group>"; };
+		66DAD8FD15467800003FA325 /* AFSharingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFSharingView.xib; sourceTree = "<group>"; };
+		66DAD9241548DF1D003FA325 /* shareTwitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareTwitter.png; sourceTree = "<group>"; };
+		66DAD9261548DFFE003FA325 /* shareFacebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareFacebook.png; sourceTree = "<group>"; };
+		66DAD9271548DFFE003FA325 /* shareMail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareMail.png; sourceTree = "<group>"; };
+		66DAD92A1548E102003FA325 /* shareOnline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareOnline.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +157,8 @@
 				661A2C0F153EA915008565A6 /* AFSmallCell.m */,
 				661A2C0B153EA371008565A6 /* AFLargeCell.h */,
 				661A2C0C153EA371008565A6 /* AFLargeCell.m */,
+				66DAD8FB15467800003FA325 /* AFSharingViewController.h */,
+				66DAD8FC15467800003FA325 /* AFSharingViewController.m */,
 				661A2BEE153E81D7008565A6 /* AFTableViewController.h */,
 				661A2BEF153E81D7008565A6 /* AFTableViewController.m */,
 				645287A2153FB09E00B2E87C /* AFDetailViewController.h */,
@@ -158,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				645287A4153FB09E00B2E87C /* AFDetailView.xib */,
+				66DAD8FD15467800003FA325 /* AFSharingView.xib */,
 				645287B2153FB72700B2E87C /* AFScrollView.xib */,
 				661A2C11153EA933008565A6 /* AFSmallCell.xib */,
 				661A2C06153EA30E008565A6 /* AFLargeCell.xib */,
@@ -179,6 +195,10 @@
 		661A2BF6153E86E5008565A6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				66DAD92A1548E102003FA325 /* shareOnline.png */,
+				66DAD9261548DFFE003FA325 /* shareFacebook.png */,
+				66DAD9271548DFFE003FA325 /* shareMail.png */,
+				66DAD9241548DF1D003FA325 /* shareTwitter.png */,
 				661A2C04153E9777008565A6 /* testCell.png */,
 				66BC371815411FDA0016CC49 /* imageUnderlay@2x.png */,
 				661A2BF9153E8A58008565A6 /* background.png */,
@@ -253,6 +273,11 @@
 				66B3332615451695001D8E49 /* titleUnderline.png in Resources */,
 				66B3332B15452A31001D8E49 /* navBarTexture.png in Resources */,
 				66B3333415462A17001D8E49 /* pagesBackground@2x.png in Resources */,
+				66DAD8FF15467800003FA325 /* AFSharingView.xib in Resources */,
+				66DAD9251548DF1D003FA325 /* shareTwitter.png in Resources */,
+				66DAD9281548DFFE003FA325 /* shareFacebook.png in Resources */,
+				66DAD9291548DFFE003FA325 /* shareMail.png in Resources */,
+				66DAD92B1548E102003FA325 /* shareOnline.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +297,7 @@
 				661A2C1C153EC1CE008565A6 /* AFStory.m in Sources */,
 				645287A5153FB09E00B2E87C /* AFDetailViewController.m in Sources */,
 				645287B1153FB6B600B2E87C /* AFScrollViewController.m in Sources */,
+				66DAD8FE15467800003FA325 /* AFSharingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

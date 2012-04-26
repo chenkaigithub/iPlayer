@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFSharingViewController.h"
 
 @interface AFDetailViewController : UIViewController
 
+@property (strong, nonatomic) AFSharingViewController *sharingView;
 @property (strong, nonatomic) IBOutlet UIImageView *imageUnderlay;
 @property (nonatomic) int pageNumber;
 @property (strong, nonatomic) NSMutableArray *data;

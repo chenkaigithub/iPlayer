@@ -89,9 +89,9 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.navigationController.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"pagesBackground"]]];
     AFScrollViewController *scrollView = [[AFScrollViewController alloc] initWithNibName:@"AFScrollView" bundle:nil];
     scrollView.pageNumber = indexPath.row;
+
     [self.navigationController pushViewController:scrollView animated:YES];
 }
 

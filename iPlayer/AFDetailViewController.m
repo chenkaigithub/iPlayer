@@ -18,6 +18,7 @@
 @synthesize imageUnderlay;
 @synthesize pageNumber;
 @synthesize data;
+@synthesize sharingView;
 
 -(id)initWithPageNumber:(int)page {
     if (self = [super initWithNibName:@"AFDetailView" bundle:nil]) {
@@ -60,7 +61,6 @@
     
     [self.view addSubview:storyParagraph];
     [self.view addSubview:storyHeadline];
-
 }
 
 - (void)viewDidUnload {

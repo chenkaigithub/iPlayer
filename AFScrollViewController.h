@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AFDetailViewController.h"
-
 @interface AFScrollViewController : UIViewController <UIScrollViewDelegate>
 
 @property (nonatomic) BOOL pageControlUsed;
+@property (strong, nonatomic) IBOutlet AFSharingViewController *shareView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) NSMutableArray *viewControllers;

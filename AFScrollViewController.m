@@ -18,6 +18,7 @@
 @synthesize viewControllers;
 @synthesize pageControlUsed;
 @synthesize pageNumber;
+@synthesize shareView;
 
 static int NumberOfPages = 15;
 
@@ -33,7 +34,6 @@ static int NumberOfPages = 15;
     _scrollView.contentSize = CGSizeMake(_scrollView.frame.size.width * NumberOfPages, _scrollView.frame.size.height);
     pageControl.numberOfPages = NumberOfPages;
     pageControl.currentPage = 0;
-    //_scrollView.backgroundColor = [UIColor clearColor];
     _scrollView.delegate = self;
     
     if (pageNumber == 0) {
@@ -44,9 +44,54 @@ static int NumberOfPages = 15;
     CGRect frame = _scrollView.frame;
     frame.origin.x = frame.size.width * pageNumber;
     frame.origin.y = 0;
-        
+    
     [_scrollView scrollRectToVisible:frame animated:NO];
+    
+    
+    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeUp:)];
+    swipeUp.direction = (UISwipeGestureRecognizerDirectionUp);
+    
+    UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeDown:)];
+    swipeDown.direction = (UISwipeGestureRecognizerDirectionDown);
+    
+    for (UIGestureRecognizer *gesture in self.view.gestureRecognizers) {
+        [gesture requireGestureRecognizerToFail:swipeUp];
+        [gesture requireGestureRecognizerToFail:swipeDown];
+    }  
+    
+    [self.view addGestureRecognizer:swipeUp];
+    [self.view addGestureRecognizer:swipeDown];
+
 }
+
+-(IBAction)handleSwipeUp:(id)sender {
+    CGAffineTransform moveUp = CGAffineTransformMakeTranslation(0, 0);
+    CGFloat pageWidth = _scrollView.frame.size.width;
+    int page = floor((_scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    NSArray *viewarray = _scrollView.subviews;
+    for (UIView *currentView in viewarray) {
+        if (currentView.tag == page) {
+            [currentView setTransform:moveUp];
+        }
+    }
+    
+    UIView *viewmove = [viewarray objectAtIndex:page];
+    [viewmove setTransform:moveUp];
+    
+}
+
+-(IBAction)handleSwipeDown:(id)sender {
+    CGAffineTransform moveDown = CGAffineTransformMakeTranslation(0, 100);
+    CGFloat pageWidth = _scrollView.frame.size.width;
+    int page = floor((_scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    NSArray *viewarray = _scrollView.subviews;
+    for (UIView *currentView in viewarray) {
+        if (currentView.tag == page) {
+            [currentView setTransform:moveDown];
+        }
+    }
+}
+
 
 
 -(void)loadScrollViewWithPage:(int)page {
@@ -64,8 +109,11 @@ static int NumberOfPages = 15;
         frame.origin.x = frame.size.width * page;
         frame.origin.y = 0;
         pageView.view.frame = frame;
+        shareView = [[AFSharingViewController alloc] initWithNibName:@"AFSharingView" bundle:nil];
+        shareView.view.frame = frame;
+        [pageView.view setTag:page];
+        [_scrollView addSubview:shareView.view];
         [_scrollView addSubview:pageView.view];
-
     }
 }
 
