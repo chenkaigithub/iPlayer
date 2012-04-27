@@ -27,7 +27,7 @@
     [self.window addSubview:_navigationController.view];
     self.window.rootViewController = _navigationController;
     _navigationController.navigationBar.tintColor = [[UIColor alloc] initWithHue:0.561 saturation:0.84 brightness:0.79 alpha:1.0];
-
+    
 //Set up model
     NSURL *url = [[NSURL alloc] initWithString:feedURL];
     AFCategory *newsFeed = [[AFCategory alloc] initWithName:@"newsFeed" andURL:url];

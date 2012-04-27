@@ -28,10 +28,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [button1 setBackgroundImage:[UIImage imageNamed:@"shareTwitter"] forState:UIControlStateNormal];
-    [button2 setBackgroundImage:[UIImage imageNamed:@"shareFacebook"] forState:UIControlStateNormal];
-    [button3 setBackgroundImage:[UIImage imageNamed:@"shareMail"] forState:UIControlStateNormal];
-    [button4 setBackgroundImage:[UIImage imageNamed:@"shareOnline"] forState:UIControlStateNormal];
+    [button1 setImage:[UIImage imageNamed:@"156"] forState:UIControlStateNormal];
+    [button2 setImage:[UIImage imageNamed:@"shareFacebook"] forState:UIControlStateNormal];
+    [button3 setImage:[UIImage imageNamed:@"shareMail"] forState:UIControlStateNormal];
+    [button4 setImage:[UIImage imageNamed:@"shareOnline"] forState:UIControlStateNormal];
 }
 
 

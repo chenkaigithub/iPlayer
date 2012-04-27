@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFAsyncImageView.h"
 
 @interface AFSmallCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *cellLeftImage;
+@property (strong, nonatomic) IBOutlet AFAsyncImageView *cellLeftImage;
 @property (strong, nonatomic) IBOutlet UILabel *cellLeftLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *cellRightImage;
+@property (strong, nonatomic) IBOutlet AFAsyncImageView *cellRightImage;
 @property (strong, nonatomic) IBOutlet UILabel *cellRightLabel;
 @property (strong, nonatomic) IBOutlet UIButton *leftButton;
 @property (strong, nonatomic) IBOutlet UIButton *rightButton;

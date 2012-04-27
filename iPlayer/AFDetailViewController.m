@@ -19,6 +19,7 @@
 @synthesize pageNumber;
 @synthesize data;
 @synthesize sharingView;
+@synthesize moviePlayerView;
 
 -(id)initWithPageNumber:(int)page {
     if (self = [super initWithNibName:@"AFDetailView" bundle:nil]) {
@@ -27,7 +28,6 @@
     AFAppDelegate *appDelegate = (AFAppDelegate *)[[UIApplication sharedApplication] delegate];
     AFCategory *news = [appDelegate.categoryList objectForKey:@"smhNews"];
     data = news.stories;
-
     return self;
 }
 
@@ -39,6 +39,7 @@
     UIButton *imageButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [imageButton setBackgroundImage:image forState:UIControlStateNormal];
     [imageButton setFrame:CGRectMake(25, 20, 270, 162)];
+    [imageButton addTarget:self action:@selector(videoButtonPushed:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:imageButton];
     
     UILabel *storyHeadline = [[UILabel alloc] initWithFrame:CGRectMake(40, 185, 240, 80)];
@@ -53,7 +54,7 @@
     [self.view addSubview:underline];
 
     
-    UILabel *storyParagraph = [[UILabel alloc]initWithFrame:CGRectMake(40, 205 + storyHeadline.frame.size.height, 250, 200)];
+    UILabel *storyParagraph = [[UILabel alloc]initWithFrame:CGRectMake(40, 190 + storyHeadline.frame.size.height, 250, 200)];
     storyParagraph.text = [[data objectAtIndex:pageNumber] detail];
     storyParagraph.numberOfLines = 0;
     [storyParagraph sizeToFit];
@@ -63,9 +64,33 @@
     [self.view addSubview:storyHeadline];
 }
 
-- (void)viewDidUnload {
+- (IBAction)videoButtonPushed:(id)sender {
+    NSURL *movieURL = [[data objectAtIndex:pageNumber] videoOriginalURL];
+    MPMovieSourceType movieSourceType = MPMovieSourceTypeStreaming;
+    
+    [self createAndConfigurePlayerWithURL:movieURL sourceType:movieSourceType];
+}
 
-    [self setImageUnderlay:nil];
+-(void)createAndConfigurePlayerWithURL:(NSURL *)movieURL sourceType:(MPMovieSourceType)sourceType {
+    moviePlayerView = [[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlaybackComplete:) name:MPMoviePlayerDidExitFullscreenNotification object:moviePlayerView.moviePlayer];
+    
+    [self presentModalViewController:moviePlayerView animated:YES];
+    [[moviePlayerView moviePlayer] setFullscreen:YES animated:YES];
+    [moviePlayerView.moviePlayer setControlStyle:MPMovieControlStyleDefault];
+    
+}
+
+-(void)moviePlaybackComplete:(NSNotification *)notification {
+    MPMoviePlayerController *_moviePlayerController = [notification object];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:_moviePlayerController];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+- (void)viewDidUnload {
+    [self setSharingView:nil];
+    [self setMoviePlayerView:nil];
     [self setImageUnderlay:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.

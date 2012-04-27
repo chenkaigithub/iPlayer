@@ -16,18 +16,41 @@
 @end
 
 @implementation AFTableViewController
-
-
+@synthesize settingsView;
+@synthesize data;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"iPlayer"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
+    
+    // Setup font and icon for settings button.
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithTitle:@"\u2699" style:UIBarButtonItemStylePlain target:self action:@selector(showSettings)];    
+    [buttons addObject:settingsButton];
+    UIFont *largeFont = [UIFont fontWithName:@"Helvetica" size:28.0];
+    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:largeFont, UITextAttributeFont, nil];
+    [settingsButton setTitleTextAttributes:dict forState:UIControlStateNormal];
+
+    AFAppDelegate *appDelegate = (AFAppDelegate *)[[UIApplication sharedApplication] delegate];
+    AFCategory *news = [appDelegate.categoryList objectForKey:@"smhNews"];
+    data = news.stories;
+    
+    self.navigationItem.rightBarButtonItems = buttons;
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
 }
+
+-(void)showSettings {
+    if (settingsView == nil) {
+        settingsView = [[AFSettingsViewController alloc] initWithNibName:@"AFSettingsView" bundle:nil];
+    }
+    [self.navigationController pushViewController:settingsView animated:YES];
+}
+
+
 
 #pragma mark - Table view data source
 
@@ -40,9 +63,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AFAppDelegate *appDelegate = (AFAppDelegate *)[[UIApplication sharedApplication] delegate];
-    AFCategory *news = [appDelegate.categoryList objectForKey:@"smhNews"];
-    
+      
     static NSString *LargeCellIdentifier = @"largeCell";
     AFLargeCell *largeCell = [tableView dequeueReusableCellWithIdentifier:LargeCellIdentifier];
     
@@ -56,9 +77,9 @@
                 NSArray *cellNibs = [[NSBundle mainBundle] loadNibNamed:@"AFLargeCell" owner:nil options:nil]; 
                 largeCell = [cellNibs objectAtIndex:0];
                     
-                NSData *image = [[NSData alloc] initWithContentsOfURL:[[[news stories] objectAtIndex:indexPath.row] imageURL]];
+                NSData *image = [[NSData alloc] initWithContentsOfURL:[[data objectAtIndex:indexPath.row] imageURL]];
                 largeCell.cellImage.image = [UIImage imageWithData:image];
-                largeCell.cellLabel.text = [[[news stories] objectAtIndex:indexPath.row] title];
+                largeCell.cellLabel.text = [[data objectAtIndex:indexPath.row] title];
                 largeCell.selectionStyle = UITableViewCellSelectionStyleNone;
                 return largeCell;
             }
@@ -70,13 +91,19 @@
                 NSArray *cellNibs = [[NSBundle mainBundle] loadNibNamed:@"AFSmallCell" owner:nil options:nil]; 
                 
                 smallCell = [cellNibs objectAtIndex:0];
-                NSData *smallImageData = [[NSData alloc] initWithContentsOfURL:[[[news stories] objectAtIndex:storyNumber-1] imageURL]];
-                smallCell.cellLeftImage.image = [UIImage imageWithData:smallImageData];
-                smallCell.cellLeftLabel.text = [[[news stories] objectAtIndex:storyNumber-1] title];
+//                NSData *smallImageData = [[NSData alloc] initWithContentsOfURL:[[data objectAtIndex:storyNumber-1] imageURL]];
+                //                smallCell.cellLeftImage.image = [UIImage imageWithData:smallImageData];
                 
-                smallImageData = [[NSData alloc] initWithContentsOfURL:[[[news stories] objectAtIndex:storyNumber] imageURL]];
-                smallCell.cellRightImage.image = [UIImage imageWithData:smallImageData];
-                smallCell.cellRightLabel.text = [[[news stories] objectAtIndex:storyNumber] title];
+                [smallCell.cellLeftImage loadImageFromURL:[[data objectAtIndex:storyNumber-1] imageURL]];
+                
+                smallCell.cellLeftLabel.text = [[data objectAtIndex:storyNumber-1] title];
+                
+//                smallImageData = [[NSData alloc] initWithContentsOfURL:[[data objectAtIndex:storyNumber] imageURL]];
+//                smallCell.cellRightImage.image = [UIImage imageWithData:smallImageData];
+                
+                [smallCell.cellRightImage loadImageFromURL:[[data objectAtIndex:storyNumber] imageURL]];
+                
+                smallCell.cellRightLabel.text = [[data objectAtIndex:storyNumber] title];
                 smallCell.leftStory = storyNumber-1;
                 smallCell.rightStory = storyNumber;
                 smallCell.selectionStyle = UITableViewCellSelectionStyleNone;

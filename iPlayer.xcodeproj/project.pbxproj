@@ -19,24 +19,28 @@
 		661A2BE8153E7DA7008565A6 /* AFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 661A2BE7153E7DA7008565A6 /* AFAppDelegate.m */; };
 		661A2BF1153E81D7008565A6 /* AFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661A2BEF153E81D7008565A6 /* AFTableViewController.m */; };
 		661A2BFA153E8A58008565A6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 661A2BF9153E8A58008565A6 /* background.png */; };
-		661A2C05153E9777008565A6 /* testCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 661A2C04153E9777008565A6 /* testCell.png */; };
 		661A2C07153EA30E008565A6 /* AFLargeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661A2C06153EA30E008565A6 /* AFLargeCell.xib */; };
 		661A2C0D153EA371008565A6 /* AFLargeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 661A2C0C153EA371008565A6 /* AFLargeCell.m */; };
 		661A2C10153EA915008565A6 /* AFSmallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 661A2C0F153EA915008565A6 /* AFSmallCell.m */; };
 		661A2C12153EA933008565A6 /* AFSmallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661A2C11153EA933008565A6 /* AFSmallCell.xib */; };
 		661A2C19153EC17C008565A6 /* AFCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 661A2C18153EC17C008565A6 /* AFCategory.m */; };
 		661A2C1C153EC1CE008565A6 /* AFStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 661A2C1B153EC1CE008565A6 /* AFStory.m */; };
+		668B736C154A27000037720F /* shareTwitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 668B736B154A27000037720F /* shareTwitter@2x.png */; };
+		668B7374154A41C20037720F /* AFAsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B7373154A41C20037720F /* AFAsyncImageView.m */; };
 		66B333231543FACD001D8E49 /* imageUnderlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B333221543FACD001D8E49 /* imageUnderlay.png */; };
 		66B3332615451695001D8E49 /* titleUnderline.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B3332515451695001D8E49 /* titleUnderline.png */; };
-		66B3332B15452A31001D8E49 /* navBarTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B3332A15452A31001D8E49 /* navBarTexture.png */; };
 		66B3333415462A17001D8E49 /* pagesBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B3333315462A17001D8E49 /* pagesBackground@2x.png */; };
-		66BC371915411FDA0016CC49 /* imageUnderlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66BC371815411FDA0016CC49 /* imageUnderlay@2x.png */; };
 		66DAD8FE15467800003FA325 /* AFSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DAD8FC15467800003FA325 /* AFSharingViewController.m */; };
 		66DAD8FF15467800003FA325 /* AFSharingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD8FD15467800003FA325 /* AFSharingView.xib */; };
 		66DAD9251548DF1D003FA325 /* shareTwitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD9241548DF1D003FA325 /* shareTwitter.png */; };
 		66DAD9281548DFFE003FA325 /* shareFacebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD9261548DFFE003FA325 /* shareFacebook.png */; };
 		66DAD9291548DFFE003FA325 /* shareMail.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD9271548DFFE003FA325 /* shareMail.png */; };
 		66DAD92B1548E102003FA325 /* shareOnline.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD92A1548E102003FA325 /* shareOnline.png */; };
+		66DAD9311548EBC0003FA325 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DAD9301548EBC0003FA325 /* MediaPlayer.framework */; };
+		66DAD9331548EBC7003FA325 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DAD9321548EBC6003FA325 /* QuartzCore.framework */; };
+		66DAD93715490D51003FA325 /* AFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DAD93515490D51003FA325 /* AFSettingsViewController.m */; };
+		66DAD93815490D51003FA325 /* AFSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD93615490D51003FA325 /* AFSettingsView.xib */; };
+		66DAD93A15490E88003FA325 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 66DAD93915490E87003FA325 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +63,6 @@
 		661A2BEE153E81D7008565A6 /* AFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFTableViewController.h; path = ../AFTableViewController.h; sourceTree = "<group>"; };
 		661A2BEF153E81D7008565A6 /* AFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFTableViewController.m; path = ../AFTableViewController.m; sourceTree = "<group>"; };
 		661A2BF9153E8A58008565A6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		661A2C04153E9777008565A6 /* testCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testCell.png; sourceTree = "<group>"; };
 		661A2C06153EA30E008565A6 /* AFLargeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AFLargeCell.xib; path = ../AFLargeCell.xib; sourceTree = "<group>"; };
 		661A2C0B153EA371008565A6 /* AFLargeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFLargeCell.h; path = ../AFLargeCell.h; sourceTree = "<group>"; };
 		661A2C0C153EA371008565A6 /* AFLargeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFLargeCell.m; path = ../AFLargeCell.m; sourceTree = "<group>"; };
@@ -70,11 +73,12 @@
 		661A2C18153EC17C008565A6 /* AFCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFCategory.m; sourceTree = "<group>"; };
 		661A2C1A153EC1CE008565A6 /* AFStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFStory.h; sourceTree = "<group>"; };
 		661A2C1B153EC1CE008565A6 /* AFStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFStory.m; sourceTree = "<group>"; };
+		668B736B154A27000037720F /* shareTwitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shareTwitter@2x.png"; sourceTree = "<group>"; };
+		668B7372154A41C20037720F /* AFAsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAsyncImageView.h; sourceTree = "<group>"; };
+		668B7373154A41C20037720F /* AFAsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAsyncImageView.m; sourceTree = "<group>"; };
 		66B333221543FACD001D8E49 /* imageUnderlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageUnderlay.png; sourceTree = "<group>"; };
 		66B3332515451695001D8E49 /* titleUnderline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleUnderline.png; sourceTree = "<group>"; };
-		66B3332A15452A31001D8E49 /* navBarTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBarTexture.png; sourceTree = "<group>"; };
 		66B3333315462A17001D8E49 /* pagesBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pagesBackground@2x.png"; sourceTree = "<group>"; };
-		66BC371815411FDA0016CC49 /* imageUnderlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageUnderlay@2x.png"; sourceTree = "<group>"; };
 		66DAD8FB15467800003FA325 /* AFSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSharingViewController.h; sourceTree = "<group>"; };
 		66DAD8FC15467800003FA325 /* AFSharingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSharingViewController.m; sourceTree = "<group>"; };
 		66DAD8FD15467800003FA325 /* AFSharingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFSharingView.xib; sourceTree = "<group>"; };
@@ -82,6 +86,12 @@
 		66DAD9261548DFFE003FA325 /* shareFacebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareFacebook.png; sourceTree = "<group>"; };
 		66DAD9271548DFFE003FA325 /* shareMail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareMail.png; sourceTree = "<group>"; };
 		66DAD92A1548E102003FA325 /* shareOnline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareOnline.png; sourceTree = "<group>"; };
+		66DAD9301548EBC0003FA325 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		66DAD9321548EBC6003FA325 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		66DAD93415490D51003FA325 /* AFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSettingsViewController.h; sourceTree = "<group>"; };
+		66DAD93515490D51003FA325 /* AFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSettingsViewController.m; sourceTree = "<group>"; };
+		66DAD93615490D51003FA325 /* AFSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFSettingsView.xib; sourceTree = "<group>"; };
+		66DAD93915490E87003FA325 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66DAD9331548EBC7003FA325 /* QuartzCore.framework in Frameworks */,
+				66DAD9311548EBC0003FA325 /* MediaPlayer.framework in Frameworks */,
 				661A2BD8153E7DA7008565A6 /* UIKit.framework in Frameworks */,
 				661A2BDA153E7DA7008565A6 /* Foundation.framework in Frameworks */,
 				661A2BDC153E7DA7008565A6 /* CoreGraphics.framework in Frameworks */,
@@ -118,6 +130,8 @@
 		661A2BD6153E7DA7008565A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66DAD9321548EBC6003FA325 /* QuartzCore.framework */,
+				66DAD9301548EBC0003FA325 /* MediaPlayer.framework */,
 				661A2BD7153E7DA7008565A6 /* UIKit.framework */,
 				661A2BD9153E7DA7008565A6 /* Foundation.framework */,
 				661A2BDB153E7DA7008565A6 /* CoreGraphics.framework */,
@@ -128,6 +142,7 @@
 		661A2BDD153E7DA7008565A6 /* iPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				66DAD93915490E87003FA325 /* Settings.bundle */,
 				661A2BF6153E86E5008565A6 /* Resources */,
 				661A2BF5153E81F0008565A6 /* Model */,
 				661A2BF4153E81E9008565A6 /* Views */,
@@ -161,8 +176,12 @@
 				66DAD8FC15467800003FA325 /* AFSharingViewController.m */,
 				661A2BEE153E81D7008565A6 /* AFTableViewController.h */,
 				661A2BEF153E81D7008565A6 /* AFTableViewController.m */,
+				668B7372154A41C20037720F /* AFAsyncImageView.h */,
+				668B7373154A41C20037720F /* AFAsyncImageView.m */,
 				645287A2153FB09E00B2E87C /* AFDetailViewController.h */,
 				645287A3153FB09E00B2E87C /* AFDetailViewController.m */,
+				66DAD93415490D51003FA325 /* AFSettingsViewController.h */,
+				66DAD93515490D51003FA325 /* AFSettingsViewController.m */,
 				645287AF153FB6B600B2E87C /* AFScrollViewController.h */,
 				645287B0153FB6B600B2E87C /* AFScrollViewController.m */,
 			);
@@ -172,6 +191,7 @@
 		661A2BF4153E81E9008565A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				66DAD93615490D51003FA325 /* AFSettingsView.xib */,
 				645287A4153FB09E00B2E87C /* AFDetailView.xib */,
 				66DAD8FD15467800003FA325 /* AFSharingView.xib */,
 				645287B2153FB72700B2E87C /* AFScrollView.xib */,
@@ -196,13 +216,11 @@
 			isa = PBXGroup;
 			children = (
 				66DAD92A1548E102003FA325 /* shareOnline.png */,
+				668B736B154A27000037720F /* shareTwitter@2x.png */,
 				66DAD9261548DFFE003FA325 /* shareFacebook.png */,
 				66DAD9271548DFFE003FA325 /* shareMail.png */,
 				66DAD9241548DF1D003FA325 /* shareTwitter.png */,
-				661A2C04153E9777008565A6 /* testCell.png */,
-				66BC371815411FDA0016CC49 /* imageUnderlay@2x.png */,
 				661A2BF9153E8A58008565A6 /* background.png */,
-				66B3332A15452A31001D8E49 /* navBarTexture.png */,
 				66B3333315462A17001D8E49 /* pagesBackground@2x.png */,
 				66B3332515451695001D8E49 /* titleUnderline.png */,
 				66B333221543FACD001D8E49 /* imageUnderlay.png */,
@@ -263,21 +281,21 @@
 			files = (
 				661A2BE2153E7DA7008565A6 /* InfoPlist.strings in Resources */,
 				661A2BFA153E8A58008565A6 /* background.png in Resources */,
-				661A2C05153E9777008565A6 /* testCell.png in Resources */,
 				661A2C07153EA30E008565A6 /* AFLargeCell.xib in Resources */,
 				661A2C12153EA933008565A6 /* AFSmallCell.xib in Resources */,
 				645287A6153FB09E00B2E87C /* AFDetailView.xib in Resources */,
 				645287B3153FB72700B2E87C /* AFScrollView.xib in Resources */,
-				66BC371915411FDA0016CC49 /* imageUnderlay@2x.png in Resources */,
 				66B333231543FACD001D8E49 /* imageUnderlay.png in Resources */,
 				66B3332615451695001D8E49 /* titleUnderline.png in Resources */,
-				66B3332B15452A31001D8E49 /* navBarTexture.png in Resources */,
 				66B3333415462A17001D8E49 /* pagesBackground@2x.png in Resources */,
 				66DAD8FF15467800003FA325 /* AFSharingView.xib in Resources */,
 				66DAD9251548DF1D003FA325 /* shareTwitter.png in Resources */,
 				66DAD9281548DFFE003FA325 /* shareFacebook.png in Resources */,
 				66DAD9291548DFFE003FA325 /* shareMail.png in Resources */,
 				66DAD92B1548E102003FA325 /* shareOnline.png in Resources */,
+				66DAD93815490D51003FA325 /* AFSettingsView.xib in Resources */,
+				66DAD93A15490E88003FA325 /* Settings.bundle in Resources */,
+				668B736C154A27000037720F /* shareTwitter@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +316,8 @@
 				645287A5153FB09E00B2E87C /* AFDetailViewController.m in Sources */,
 				645287B1153FB6B600B2E87C /* AFScrollViewController.m in Sources */,
 				66DAD8FE15467800003FA325 /* AFSharingViewController.m in Sources */,
+				66DAD93715490D51003FA325 /* AFSettingsViewController.m in Sources */,
+				668B7374154A41C20037720F /* AFAsyncImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AFCategory.h"
+#import "AFSettingsViewController.h"
 
 @interface AFAppDelegate : UIResponder <UIApplicationDelegate>
+
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *navigationController;

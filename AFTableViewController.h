@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "AFScrollViewController.h"
+#import "AFSettingsViewController.h"
 @interface AFTableViewController : UITableViewController
-    
-
+@property(strong, nonatomic) AFSettingsViewController *settingsView;
+@property (strong, nonatomic) NSMutableArray *data;
 @end
